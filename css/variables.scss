@@ -1,0 +1,45 @@
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function rem($num) {
+  @return (strip-unit($num) / 16) * 1rem;
+}
+
+$base: rem(4px);
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$fz-xxs: rem(10px);
+$fz-xs: rem(12px);
+$fz-s: rem(15px);
+$fz-m: rem(18px);
+$fz-l: rem(24px);
+$fz-xl: rem(36px);
+$fz-xxl: rem(48px);
+
+$breakpoint-sm-min: 576px;
+$breakpoint-xs-max: $breakpoint-sm-min - 1px;
+$breakpoint-md-min: 768px;
+$breakpoint-sm-max: $breakpoint-md-min - 1px;
+$breakpoint-lg-min: 992px;
+$breakpoint-md-max: $breakpoint-lg-min - 1px;
+$breakpoint-xl-min: 1200px;
+$breakpoint-lg-max: $breakpoint-xl-min - 1px;
+$breakpoint-xxl-min: 1400px;
+$breakpoint-xl-max: $breakpoint-xxl-min - 1px;
+
+$padding-vertical-xs: $base * 5;
+$padding-vertical-sm: $base * 15;
+$padding-vertical: $base * 30;
+
+$transition: 0.2s;
+
+$color-divider: #d8e3fe;
+
+$color-white: #fff;
+$color-primary: #495274;
+$color-secondary: #6188ff;
