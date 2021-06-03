@@ -58,7 +58,7 @@ gulp.task('clean:dist', function() {
 
 gulp.task('watch', ['browserSync', 'sass' ,'js'], function (){
     gulp.watch('css/**/*.scss',  ['sass']);
-    gulp.watch('app/**/*.js',  ['js']);
+    gulp.watch('src/js/**/*.js',  ['js']);
 });
 
 gulp.task('build', function (callback) {
